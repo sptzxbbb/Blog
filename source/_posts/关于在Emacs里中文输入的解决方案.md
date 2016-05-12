@@ -8,7 +8,12 @@ tags: Emacs
 
 我使用的是Spacemacs的配置，Spacemacs虽然增加了chinese这一层layer的支持，但实际使用时内置的中文输入法表现非常差，和Fcitx的体验判若云泥。这样就坚定了我使用外援Fcitx的决心。
 
+![Embedded Input Method](/images/关于在Emacs里中文输入的解决方案/1.png) 
+
+
 在Emacs里面，Fcitx是无法激活的。查阅了Fcitx的文档后发现是GTK程序(Emacs的图形界面是由GTK编写)的im(input module)不是Fcitx，例如我正在使用系统是Ubuntu16.04，此时GTK默认的im是ibus。所以Fcitx在Emacs里面无法激活。
+
+<!--more-->
 
 知道原因后，其实解决方案十分简单，通过改变环境变量来修改GTK的im模块。
 

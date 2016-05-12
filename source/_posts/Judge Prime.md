@@ -7,8 +7,6 @@ date: 2015-04-28
 
 A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. 
 
-<!--more-->
-
 ### Trial division ###
 
 In most cases, we need to determine whether a number is a prime.
@@ -17,6 +15,7 @@ A simple algorithm to do so is <font color="Red"> trial division</font>
 
 The idea is to test whether <u>n is divisible by any smaller number</u>. The trial factor go no further than $\sqrt{n}$ because, if n is divisible by some number p, then $n = p × q$ and if q were smaller than p, n would have earlier been detected as being divisible by q or a prime factor of q.
 
+<!--more-->
 
 ~~~c++
 bool isPrime(int n) {
