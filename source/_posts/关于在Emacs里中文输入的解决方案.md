@@ -1,6 +1,7 @@
 ---
 title: 关于在Emacs里中文输入的解决方案
 date: 2016-05-12
+update: 2016-05-21 15:53:01
 tags: Emacs
 ---
 
@@ -31,6 +32,10 @@ export LC_CTYPE=zh_CN.UTF-8
 ```
 
 运行`locale`和`fcitx-diagnose`查看上面的变量是否正确设置，没问题的话，Emacs应该可以正常使用中文。
+
+进行了上述操作后依然可能出现环境变量没有发生变化，这时候可以尝试直接粗暴的卸载ibus框架(核心问题就是ibus和fcitx发生了框架冲突)，我在Ubuntu16.04上卸载ibus后，没有出现过去Ubuntu版本的系统模块功能缺失bug，看来Ubuntu16.04已经把ibus和系统模块彻底分离。
+
+同理，如果其他QT，QTK程序无法输入中文，都可以尝试这种做法，例如WPS for linux。
 
 绝大多数输入法的激活Key都是Ctrl+Space，这个组合键`Emacs`已经用于某个功能，因此还需要改输入法的激活Key或者将这个功能的组合键作一个新的映射。
 
