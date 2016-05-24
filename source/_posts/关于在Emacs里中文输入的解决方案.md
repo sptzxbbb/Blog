@@ -7,11 +7,10 @@ tags: Emacs
 
 为了在Emacs中自由的写Blog，这两天一直在研究Emacs中文输入的solution。
 
-我使用的是Spacemacs的配置，Spacemacs虽然增加了chinese这一层layer的支持，但实际使用时内置的中文输入法表现非常差，和Fcitx的体验判若云泥。这样就坚定了我使用外援Fcitx的决心。
-
+我使用的是Spacemacs的配置，Spacemacs虽然增加了chinese这一层layer的支持，但实际使用时内置的中文输入法表现非常差，完全是让老外能偶尔写一两个中文字的程度，和Fcitx的体验判若云泥。最后决定了使用Fcitx作为输入法。
+<center>
 ![Embedded Input Method](/images/关于在Emacs里中文输入的解决方案/1.png) 
-
-
+</center>
 在Emacs里面，Fcitx是无法激活的。查阅了Fcitx的文档后发现是GTK程序(Emacs的图形界面是由GTK编写)的im(input module)不是Fcitx，例如我正在使用系统是Ubuntu16.04，此时GTK默认的im是ibus。所以Fcitx在Emacs里面无法激活。
 
 <!--more-->
@@ -33,11 +32,10 @@ export LC_CTYPE=zh_CN.UTF-8
 
 运行`locale`和`fcitx-diagnose`查看上面的变量是否正确设置，没问题的话，Emacs应该可以正常使用中文。
 
-进行了上述操作后依然可能出现环境变量没有发生变化，这时候可以尝试直接粗暴的卸载ibus框架(核心问题就是ibus和fcitx发生了框架冲突)，我在Ubuntu16.04上卸载ibus后，没有出现过去Ubuntu版本的系统模块功能缺失bug，看来Ubuntu16.04已经把ibus和系统模块彻底分离。
 
 同理，如果其他QT，QTK程序无法输入中文，都可以尝试这种做法，例如WPS for linux。
 
-绝大多数输入法的激活Key都是Ctrl+Space，这个组合键`Emacs`已经用于某个功能，因此还需要改输入法的激活Key或者将这个功能的组合键作一个新的映射。
+绝大多数输入法的激活Key都是Ctrl+Space，这个组合键`Emacs`已经用于`Mark activated/Deactivated`，因此还需要改输入法的激活Key或者将这个功能的组合键作一个新的映射。
 
 Reference:
     [Input method related environment variables](https://fcitx-im.org/wiki/Input_method_related_environment_variables) 
