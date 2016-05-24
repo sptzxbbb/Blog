@@ -3,21 +3,23 @@ title: 使用git管理Hexo博客
 tags:
 ---
 
-# 博客管理
+# 搭建并管理博客
 
-创建repo，`sptzxbbb.github.io`
+在github上创建repo，`sptzxbbb.github.io`，同时开设新的分支`hexo`
 
-创建并切换到新的分支`hexo`来写post和管理blog的setting。
+在本地执行`hexo init`创建blog，并关联到repo。
+
+本地创建并切换到新的分支`hexo`来写post和管理blog的setting。
 
 修改站点设置`_config.yml`中deploy参数，分支设置为master。
 
-以后只需要在hexo分支下push commit到远程仓库的远程分支hexo下即可。
+在hexo分支下push commit到远程仓库的远程分支hexo下即可完成blog源代码的管理。
 
-执行`hexo g -d`将blog自动部署到github上。
+执行`hexo g -d`将blog自动部署到github的repo的master分支上。
 
 
 
-# 在新的机器上搭建博客
+# 在新的机器上重新搭建博客
 
 在github上clone Hexo博客到本地。
 
