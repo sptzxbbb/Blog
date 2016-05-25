@@ -1,6 +1,8 @@
 ---
 title: 使用git管理Hexo博客
-tags:
+date: 2016-05-25 10:41:41
+tags: [git, hexo]
+category: Blog
 ---
 
 # 搭建并管理博客
@@ -17,7 +19,8 @@ tags:
 
 执行`hexo g -d`将blog自动部署到github的repo的master分支上。
 
-
+<!--more-->
+    
 
 # 在新的机器上重新搭建博客
 
@@ -45,7 +48,7 @@ $ npm install
 ```
 
 
-本地预览时，原因不明的hang在以下语句，
+本地预览时，遇到原因不明的bug，hang在以下语句，
 
 ```
 $ 19:43:10.411 DEBUG Processed: source/vendors/font-awesome/fonts/fontawesome-webfont.svg
