@@ -1,13 +1,12 @@
 ---
-title: curl常用功能笔记
+title: cURL Note
 tags: tool
 date: 2016-05-27 14:51:13
 ---
 
-
 curl是一种命令行工具，能够发出网络请求，得到feedback，输出在console上面。
 
-下面记录一些我在学习工作中常用的功能。
+下面总结一些我在学习工作中常用的功能。
 
 <!--more-->
 
@@ -118,6 +117,15 @@ $ curl --trace output www.sina.com
 结果保存在`output`文件里。
 
 
+## 指定Http动作
+
+curl默认http的动作是`GET`，使用`-X`参数可以指定执行其他动作。
+
+```
+$ curl -X POST www.example.com
+$ curl -X DELETE www.example.com
+```
+
 ## 发送表单信息
 
 发送http的表单信息有`GET`和`POST`两种方法。
@@ -128,20 +136,12 @@ $ curl --trace output www.sina.com
 $ curl examplecom/form.cgi?data=xxx
 ```
 
-`POST`方法必须把数据和网址分开，需要用到`-data`参数
+`POST`方法必须把数据和网址分开，需要用到`-data`或者`-d`参数
 
 ```
 $ curl -X POST --data "data=xxx" example.com/form.cgi
 ```
 
-## 指定Http动作
-
-curl默认http的动作是`GET`，使用`-X`参数可以指定执行其他动作。
-
-```
-$ curl -X POST www.example.com
-$ curl -X DELETE www.example.com
-```
 
 ## 文件上传
 
@@ -197,7 +197,7 @@ $ curl -b cookies-file www.example.com
 
 ## 增加头部信息
 
-有时候需要在Http Response中增加一个头部信息，`--header`参数可以实现这一点。
+有时候需要在Http Response中增加一个头部信息，`--header`或者`-H`参数可以实现这一点。
 
 ```
 $ curl --header "Content-Type:application/json" http://example.com
@@ -205,7 +205,7 @@ $ curl --header "Content-Type:application/json" http://example.com
 
 ## HTTP认证
 
-有些网域需要HTTP认证，这是curl需要添加`--user`参数。
+有些网域需要HTTP认证，这是curl需要添加`--user/-u <user:password>`参数。
 
 ```
 $ curl --user name:password www.example.com
