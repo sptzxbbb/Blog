@@ -1,7 +1,7 @@
 ---
 title:  Linux Kernel-Protected Mode
-categories: Linux
-tags: OS 
+categories: Coding 
+tags: [Linux]
 date: 2015-03-22
 ---
 

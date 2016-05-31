@@ -1,7 +1,7 @@
 ---
 title: Prime Judge
-tags: [Math]
-category: Algorithm
+tags: [Algorithm]
+category: Coding
 date: 2015-04-28
 ---
 

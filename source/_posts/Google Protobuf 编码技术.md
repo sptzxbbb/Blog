@@ -1,7 +1,7 @@
 ---
 title: Google Protobuf编码技术
-tags: [Protobuf]
-category: Encoding
+tags: [encode]
+category: Coding 
 date: 2015-05-05
 ---
 
@@ -9,7 +9,7 @@ Google Protocol Buffer是Google於2008年開源的一款非常優秀的**序列�
 
 <!--more-->
 
-关于序列化的定义，摘自WikiPedia：
+关于序列化的定义，摘自Wikipedia
 
 > In computer science, in the context of data storage, serialization is the process of translating data structures or object state into a format that can be stored (for example, in a file or memory buffer, or transmitted across a network connection link) and reconstructed later in the same or another computer environment. When the resulting series of bits is reread according to the serialization format, it can be used to create a semantically identical clone of the original object. 
 

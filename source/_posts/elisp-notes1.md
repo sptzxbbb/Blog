@@ -1,9 +1,9 @@
 ---
 title: Elisp Notes 1 - Elisp Basics
-tags:
-  - emacs
+tags: 
+    - Emacs
+categories: Coding 
 date: 2016-05-26 12:14:58
-category: 
 ---
 
 

@@ -1,8 +1,8 @@
 ---
-title: Git学习
+title: Git Note
 date: 2016-05-25 10:15:46
 tags: git
-category: tool
+category: Coding
 ---
 
 # 远程仓库的使用
@@ -14,6 +14,8 @@ category: tool
 ```
 $ git remote add origin git@github.com:sptzxbbb/sptzxbbb.github.io.git
 ```
+
+<!--more-->
 
 ## 远程仓库的查看
 

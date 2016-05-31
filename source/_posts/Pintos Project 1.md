@@ -1,7 +1,7 @@
 ---
 title: Pintos Project1
-tags: [OS]
-category: Project
+tags: [project]
+category: Coding 
 date: 2015-08-12
 ---
 
