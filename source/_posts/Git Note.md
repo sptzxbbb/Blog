@@ -1,8 +1,8 @@
 ---
 title: Git Note
 date: 2016-05-25 10:15:46
-tags: git
-category: Coding
+categories: Coding
+tags: [git]
 ---
 
 # 远程仓库的使用

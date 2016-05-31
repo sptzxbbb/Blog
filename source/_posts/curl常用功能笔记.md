@@ -1,9 +1,8 @@
 ---
 title: cURL Note
-categories: Coding
-tags: 
-    - tool
 date: 2016-05-27 14:51:13
+categories: Coding
+tags: [tool]
 ---
 
 curl是一种命令行工具，能够发出网络请求，得到feedback，输出在console上面。

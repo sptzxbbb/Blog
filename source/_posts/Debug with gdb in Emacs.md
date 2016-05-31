@@ -1,9 +1,8 @@
 ---
 title: Debug with gdb in Emacs
-tag: 
-    - tool
-categories: Coding
 date: 2016-05-31 14:19:18
+categories: Coding
+tag: [tool]
 ---
 
 

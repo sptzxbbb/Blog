@@ -1,8 +1,8 @@
 ---
 title: 使用git管理Hexo博客
+category: Coding 
 date: 2016-05-25 10:41:41
 tags: [git, hexo]
-category: Coding 
 ---
 
 # 搭建并管理博客

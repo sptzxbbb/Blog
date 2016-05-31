@@ -1,8 +1,8 @@
 ---
 title: (译)如何使用Valgrind进行C/C++的内存泄漏检测
-tags: [tool]
-category: Coding
 date: 2015-06-02
+category: Coding
+tags: [tool]
 ---
 
 ### 简介 ###

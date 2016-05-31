@@ -1,8 +1,8 @@
 ---
 title: Google Protobuf编码技术
-tags: [encode]
-category: Coding 
 date: 2015-05-05
+categories: Coding 
+tags: [encode]
 ---
 
 Google Protocol Buffer是Google於2008年開源的一款非常優秀的**序列化反序列化工具**，它最突出的特點是輕便簡介，而且有很多語言的接口（官方的支持C++，Java，Python，C，以及第三方的Erlang, Perl等）。

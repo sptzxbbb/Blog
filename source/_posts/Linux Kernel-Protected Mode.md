@@ -1,8 +1,8 @@
 ---
 title:  Linux Kernel-Protected Mode
+date: 2015-03-22
 categories: Coding 
 tags: [Linux]
-date: 2015-03-22
 ---
 
 ## Paging Mechanism ##

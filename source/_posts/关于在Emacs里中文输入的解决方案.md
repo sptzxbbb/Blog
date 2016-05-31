@@ -2,8 +2,8 @@
 title: 关于在Emacs里中文输入的解决方案
 date: 2016-05-12
 update: 2016-05-21 15:53:01
-tags: Emacs
 category: Coding
+tags: Emacs
 ---
 
 为了在Emacs中自由的写Blog，这两天一直在研究Emacs中文输入的solution。

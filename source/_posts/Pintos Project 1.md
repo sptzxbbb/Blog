@@ -1,8 +1,8 @@
 ---
 title: Pintos Project1
-tags: [project]
-category: Coding 
 date: 2015-08-12
+category: Coding 
+tags: [project]
 ---
 
 ### 前言 ###
