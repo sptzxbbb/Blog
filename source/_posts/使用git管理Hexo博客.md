@@ -33,14 +33,15 @@ $ git clone git@github.com:sptzxbbb/sptzxbbb.github.io.git
 建立本地hexo分支追踪origin/hexo。
 
 ```
-$ git checkout -b hexo origin/hexo
+$ git checkout -b blog-source origin/blog-source
 ```
 
 安装hexo
 
 ```
-$ npm install hexo --save
+$ npm install -g hexo
 ```
+
 
 安装依赖包
 ```
@@ -48,7 +49,7 @@ $ npm install
 ```
 
 
-本地预览时，遇到原因不明的bug，hang在以下语句，
+本地预览时，遇到过原因不明的bug，hang在以下语句，
 
 ```
 $ 19:43:10.411 DEBUG Processed: source/vendors/font-awesome/fonts/fontawesome-webfont.svg
