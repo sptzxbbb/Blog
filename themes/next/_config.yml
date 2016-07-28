@@ -118,8 +118,8 @@ font:
 social:
   #LinkLabel: Link
   github: https://github.com/sptzxbbb
-  豆瓣: https://www.douban.com/people/sptzxb
-  知乎: https://www.zhihu.com/people/sptzxb
+  # 豆瓣: https://www.douban.com/people/sptzxb
+  # 知乎: https://www.zhihu.com/people/sptzxb
   S.O: http://stackoverflow.com/users/4215168/peter-chow
 
 # Social Links Icons

@@ -1,8 +1,8 @@
 ---
 title: HTTP服务调试神器-HTTPie
 date: 2016-07-27 17:24:43
-categories:
-tags:
+categories: [Coding]
+tags: [tool]
 ---
 
 过去在进行web开发，restfulAPI，调试的工具一直是cURL。但cURL反人类的繁琐语法命令让我感到十分恶心，幸运的是我在Github上找到了一个交互十分友好的工具---**HTTPie**, 一个命令行式的HTTP客户端，致力于使用简单自然的语法和丰富多彩的输出与HTTP server测试，调试和交互。
