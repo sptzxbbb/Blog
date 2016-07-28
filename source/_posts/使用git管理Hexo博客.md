@@ -1,5 +1,5 @@
 ---
-title: 使用git管理Hexo博客
+title: 使用git和Hexo管理博客
 category: Coding 
 date: 2016-05-25 10:41:41
 tags: [git, hexo]
@@ -36,26 +36,25 @@ $ git clone git@github.com:sptzxbbb/sptzxbbb.github.io.git
 $ git checkout -b blog-source origin/blog-source
 ```
 
-安装hexo
+安装`hexo`, 由于hexo3把服务器独立出来，作为一个附加模块，所以还要安装`hexo-server`来做本地预览。
 
 ```
-$ npm install -g hexo
+$ npm install hexo
+$ npm install hexo-server
 ```
-
 
 安装依赖包
 ```
 $ npm install 
 ```
 
-
-本地预览时，遇到过原因不明的bug，hang在以下语句，
+# hexo常用命令
 
 ```
-$ 19:43:10.411 DEBUG Processed: source/vendors/font-awesome/fonts/fontawesome-webfont.svg
+$ hexo init  # 初始化hexo
+$ hexo new draft Foo  # Hexo创建草稿Foo到source/_draft/。
+$ hexo publish draft Foo  # Hexo把草稿Foo发布到source/_post/。
+$ hexo server   # Hexo 会监视文件变动并自动更新，无须重启服务器。
+$ hexo g -d  # Hexo生成文件和部署到服务器。
 ```
-
-经过无数尝试后，找到一个workaround。
-
-删除掉`_drafts`后，再新建**空**的`_drafts`，将原来的草稿copy到空的`_drafts`中即可。
 
