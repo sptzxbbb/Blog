@@ -24,7 +24,9 @@ Python把对象分成两类，可变对象与不可变对象。
 >>> print(id(s))
 139641239393520
 ```
-字符串`s`指向的内存地址发生了变化，说明操作前后已经不是同一个对象。
+字符串`s`指向的内存地址发生了变化，说明操作前后已经<font color=red>不是同一个对象</font>.
+![demo](/images/Python的变量与传值/demo.png)
+
 
 可变对象内容发生改变后依然返回**相同**的对象。
 ```python
@@ -64,9 +66,7 @@ if __name__ == '__main__':
 The value of (a, b) in test() is  b a
 The value of (a, b) in main() is  a b
 ```
-
 python传值中需要注意的还有一个地方, 默认参数的值只有在函数被加载时候会被计算一次, 因此多次调用函数时候, 默认参数的值可能会发生改变.
-
 ```python
 def test(val, l=[]):
     l.append(val)
@@ -80,17 +80,14 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-
-结果
+结果如下
 ```
 ➜  python ./my.py
 [1]
 [1, 2]
 [1, 2, 3]
 ```
-
-python这个传值的特点大多时候会帮倒忙, 函数返回的值依赖于__过去的调用结果__, 这给debug造成了很大的麻烦, 因此定义默认参数的时候我们会选择设置为_不可变对象_来确保函数行为的前后一致性.
-
+python这个传值的特点大多时候会帮倒忙, 函数的行为依赖于<font color=red>__过去的调用结果__</font>, 这给debug造成了大麻烦, 因此定义默认参数的时候我们会选择设置为_不可变对象_来确保函数行为的前后一致性.
 
 我们根据这点修改`test()`函数
 ```python
@@ -100,7 +97,6 @@ def test(val, l=None):
     l.append(val)
     return l
 ```
-
 结果如下, 函数行为符合我们的心里预期.
 ```
 ➜  python ./my.py
