@@ -6,14 +6,11 @@ categories: Coding
 date: 2016-07-27 17:08:05
 ---
 
-
-
 一直使用`Spacemacs`作为我的开发IDE，`Spacemacs`提供了许多十分强大，让我爱不释手的`Feature`，但同时也要记得许多的快捷键才能用得痛快，下面列出一些我常用的快捷键作为备忘录。
 
-<!--more-->    
-
-## 配置文件
-
+<!--more-->
+    
+## 配置文件 
 `<SPC f e d>`, 打开`.spacemacs`文件。
 
 `<SPC f e R>`，重新加载`.spacemacs`文件，主要用于修改配置后直接apply新的配置，避免重启`spacemacs`的麻烦。
@@ -43,3 +40,12 @@ date: 2016-07-27 17:08:05
 
 `<SPC s a b>`, 在所有打开的buffer里使用ag搜索。
 
+`<SPC s c>`, 清楚搜索的高亮结果。
+
+`<SPC />`, 在当前目录下进行搜索。
+
+`<SPC f R>`, 重命名当前文件。
+
+`<SPC f t>`, 打开当前buffer的`Neo Tree`
+
+`<SPC p t>`, 打开当前Project的`Neo Tree`
