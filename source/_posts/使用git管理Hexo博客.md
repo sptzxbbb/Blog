@@ -48,6 +48,16 @@ $ npm install hexo-server
 $ npm install 
 ```
 
+本地预览时，遇到过原因不明的bug，hang在以下语句，
+
+```
+$ 19:43:10.411 DEBUG Processed: source/vendors/font-awesome/fonts/fontawesome-webfont.svg
+```
+
+经过无数尝试后，找到一个workaround。
+
+删除掉`_drafts`后，再新建**空**的`_drafts`，将原来的草稿copy到空的`_drafts`中即可。
+
 # hexo常用命令
 
 ```
