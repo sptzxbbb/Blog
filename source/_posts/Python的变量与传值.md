@@ -39,6 +39,8 @@ Python把对象分成两类，可变对象与不可变对象。
 ```
 列表`a`指向的内存地址没有变化，说明操作前后依然是同一个对象。
 
+![demo2](/images/Python的变量与传值/demo2.png)
+
 
 # 传值
 
@@ -66,6 +68,11 @@ if __name__ == '__main__':
 The value of (a, b) in test() is  b a
 The value of (a, b) in main() is  a b
 ```
+
+`a`和`b`为`main()`中的变量 `a'`和`b'`为`swap()`中的变量，内存情况如图
+![demo3](/images/Python的变量与传值/demo3.png) 
+
+
 python传值中需要注意的还有一个地方, 默认参数的值只有在函数被加载时候会被计算一次, 因此多次调用函数时候, 默认参数的值可能会发生改变.
 ```python
 def test(val, l=[]):

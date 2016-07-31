@@ -5,6 +5,7 @@ categories: [Coding]
 tags: [Python]
 ---
 
+最开始学Python时候一直对`str`和`bytes`理不清楚, 今天好好梳理以下两者的区别。
 
 <!--more-->
 
