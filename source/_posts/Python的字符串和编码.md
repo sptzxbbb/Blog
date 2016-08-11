@@ -5,18 +5,13 @@ categories: [Coding]
 tags: [Python]
 ---
 
-最开始学Python时候一直对`str`和`bytes`理不清楚, 今天好好梳理以下两者的区别。
-
-<!--more-->
-
 # 简述
 
 Python3中把字符串明确分为`str`和`bytes`两种对象。
-
 `str`用`Unicode`编码，因此字符串处理可以兼容多国语言，免去编程时候的不同语言造成的乱码。
+`bytes`为二进制编码，通过`str`对象使用某种编码得到，占用空间小，方便传输和保存。
 
-`bytes`为二进制编码，通过`str`对象使用某种编码得到，占用内存小，方便传输和保存。
-
+<!--more-->
 
 # str
 
@@ -33,6 +28,7 @@ Python提供了`ord()`函数来获取单个字符的`Unicode`编码，反过来�
 '斌
 ```
 # bytes
+
 
 `bytes`在Python中需要加上`b`前缀来表示。
 
