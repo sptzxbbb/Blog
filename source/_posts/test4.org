@@ -1,0 +1,19 @@
+#+TITLE: test4
+#+DATE: 2017-04-09
+#+LAYOUT: post
+#+TAGS: tag4
+#+CATEGORIES: cat4
+
+
+
+
+[[file:test4/test_img.png]]
+
+
+
+
+
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2017-04-09 20:51:38
+[[file:../../../Pictures/screenshot_2017-04-09_20-51-38.png]]

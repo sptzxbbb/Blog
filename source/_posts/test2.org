@@ -1,0 +1,7 @@
+#+TITLE: test2
+#+DATE: 2017-04-09
+#+LAYOUT: post
+#+TAGS: tag2
+#+CATEGORIES: cat2
+
+Test2

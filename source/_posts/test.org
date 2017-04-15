@@ -1,0 +1,8 @@
+#+TITLE: test
+#+DATE: <2017-04-09>
+#+LAYOUT: post
+#+TAGS: tag1, tag2
+#+CATEGORIES: cat1
+
+
+
