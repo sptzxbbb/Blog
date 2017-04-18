@@ -1,0 +1,135 @@
+#+TITLE: git note
+#+DATE: 2017-04-17
+#+LAYOUT: post
+#+TAGS: org
+#+CATEGORIES: tool
+
+* Git basic
+
+Git使用 ~Head~ 来表示当前版本, ~Head^~ 表示上一个版本, ^用于版本计数, 例如往上100个版本, 写作 ~HEAD~100~
+
+版本移动, 使用 ~git reset --hard~ 命令, 后接版本ID.
+
+为了避免版本回滚后无法查看未来版本的ID, git提供 ~git reflog~ 命令来记录版本移动记录.
+
+~git add~ 命令用于将修改或新建的文件提交到 ~stage~ 当中, ~stage~ 是一个用于存放与当前版本相比, 下个版本中发生变化的文件集合, 一旦 ~commit~ 后, ~stage~ 当中
+的内容将被整合成一个新版本, 同时 ~stage~ 自动清空, 留待下一个版本使用.
+
+如果想要把某一尚未加入 ~stage~ 文件从恢复到最新版本的状态, 使用 ~git checkout -- <filename>~ 命令
+
+#+BEGIN_SRC bash
+git checkout -- <filename>
+#+END_SRC
+
+换言之, 这个命令使得某个文件回到最近一次 ~git commit~ 或者 ~git add~ 时的状态.
+
+然而万一把错误修改后的文件加入到了 ~stage~, 该如何撤销?
+
+#+BEGIN_SRC bash
+git reset HEAD <filename>
+#+END_SRC
+
+~git reset~ 命令抽象含义是把HEAD指针重置成某种状态, 也可以用于把 ~stage~ 中的修改撤销.
+
+此时再接 ~git checkout -- <filename>~, 就可以把文件恢复到上一个版本的状态了.
+
+** 远程仓库
+
+** .gitignore
+   ~git status~ 可能会包含一些我们不需要的文件, 例如
+   + OS, IDE, 编辑器或者编译器自动生成的文件
+   + 含有敏感信息的配置文件
+     
+   只需要再Git工作区的根目录创建 ~.gitignore~, git就会自动忽略这些文件, 不会影响版本管理.
+   ~.gitignore~ 不需要从头写, Github为用户准备了各种配置文件, 只需要稍作组合和修改就可以使用
+
+   地址: https://github.com/github/gitignore
+
+   有时候, 当我们想要添加一个文件进入Git时候, 发现无法添加, 可能是被 ~.gitignore~ 所忽略掉了.
+
+   如果确实要想添加文件, 可以使用
+
+   #+BEGIN_SRC bash
+   $ git add -f <filename>
+   #+END_SRC
+   
+   来强制添加, 或者可能是 ~.gitignore~ 写的有问题, 需要找出哪条规则写错了, 可以用
+   
+   #+BEGIN_SRC bash
+   $ git check-ignore -v <filename>
+   #+END_SRC
+
+   来找出哪条规则除了问题, 我们就可以针对性的修改它.
+
+** 分支管理
+
+   + 查看分支: ~git branch~
+   + 创建分支: ~git branch <name>~
+   + 切换分支: ~git checkout <name>~
+   + 创建并切换分支: ~git checkout -b <name>~
+   + 合并某一分支到当前分支: ~git merge <name>~
+   + 删除分支: ~git branch -d <name>~
+
+** 分支合并     
+   
+** Bug分支
+
+   开发过程中, 如果要临时去修复一个bug, 然而当前开发分支dev的工作尚未完成, 无法 ~commit~ 成一个新版本
+   
+   此时可以使用
+
+   #+BEGIN_SRC bash
+   $ git stash
+   #+END_SRC
+
+   来"储藏"临时现场, 然后切换到其他分支完成工作后再切回来,"恢复"现场. 被保存的临时现场可以用 ~git stash list~ 查看.
+
+   #+BEGIN_SRC bash
+   $ git stash list
+   $ git stash pop
+   #+END_SRC
+
+** 删除未合并分支
+   未合并的分支无法用
+
+   #+BEGIN_SRC bash
+   ➜  git_demo git:(master) git br -d unmerged-branch 
+   error: The branch 'unmerged-branch' is not fully merged.
+   If you are sure you want to delete it, run 'git branch -D unmerged-branch'.
+   #+END_SRC
+
+   来删除, git会阻止我们这么做, 因为有误删的风险存在.
+
+   再三确定要删除后, 用
+   
+   #+BEGIN_SRC bash
+   ➜  git_demo git:(master) git br -D unmerged-branch
+   Deleted branch unmerged-branch (was a6f3c94).
+   #+END_SRC
+
+   
+** 多人协作
+   使用
+
+   #+BEGIN_SRC bash
+   $ git clone repo-address
+   #+END_SRC
+
+   时候, Git自动使本地的 ~master~ 追踪远程的 ~master~, 并且给予远程仓库一个默认名称 ~origin~.
+
+   查看远程仓库信息.
+
+   #+BEGIN_SRC bash
+   $ git remote -v
+   origin repo-address (fetch)
+   origin repo-address (push)
+   #+END_SRC
+   
+   如果没有推送权限, 就看不到 ~push~ 地址.
+
+*** 推送分支
+    把该分支上的所有 ~commit~ 推送到远程仓库 ~origin~. 推送时候要指定本地分支, Git会把该分支推送到远程仓库对应的追踪分支上.
+
+    #+BEGIN_SRC bash
+    $ git push origin master
+    #+END_SRC
