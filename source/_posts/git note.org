@@ -153,3 +153,51 @@ git reset HEAD <filename>
     #+BEGIN_SRC bash
     $ git checkout -b dev origin/dev
     #+END_SRC
+
+** 标签
+   Git中的标签是一个指向某个 ~commit~ 的常量指针, 主要用于方便管理有特殊意义的 ~commit~.
+
+   打标签命令如下
+
+   #+BEGIN_SRC bash
+   $ git tag <name> [commit-id]
+   #+END_SRC
+
+   当 ~commit-id~ 缺省时, 则对当前版本打标签.
+
+   查看标签:
+
+   #+BEGIN_SRC bash
+   $ git tag
+   v1.0
+   #+END_SRC
+
+   查看某个标签的具体 ~commit~ 信息:
+
+   #+BEGIN_SRC bash
+   $ git show v1.0
+   #+END_SRC
+
+   还可以创建带说明的标签:
+
+   #+BEGIN_SRC bash
+   $ git tag -a v1.0 -m "version 1.0 released" 8c484a9
+   #+END_SRC
+
+*** 操作标签
+    删除打错了的标签
+    #+BEGIN_SRC bash
+    $ git tag -d v1.0
+    #+END_SRC
+
+    推送标签到远程仓库
+
+    #+BEGIN_SRC bash
+    $ git push origin v1.0
+    #+END_SRC
+
+    或者推送全部尚未推送到远程的本地标签
+
+    #+BEGIN_SRC bash
+    $ git push origin --tags
+    #+END_SRC
